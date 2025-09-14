@@ -175,7 +175,7 @@
     if (name && link && date && difficulty) {
       const newProblem = { name, link, date, difficulty };
       // Send to backend
-      await fetch("http://localhost:3000/problems", {
+      await fetch("https://leetcodetracker-0bf7.onrender.com/problems", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newProblem)
@@ -187,7 +187,7 @@
 
   // Load problems from backend
   async function loadProblemsFromBackend() {
-    const res = await fetch("http://localhost:3000/problems");
+    const res = await fetch("https://leetcodetracker-0bf7.onrender.com/problems");
     problems = await res.json();
     renderTable();
   }
@@ -198,3 +198,4 @@
 
 </body>
 </html>
+
