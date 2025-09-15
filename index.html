@@ -148,7 +148,7 @@
         <td>${index + 1}</td>
         <td>${p.name}</td>
         <td><a href="${p.link}" target="_blank" rel="noopener noreferrer">Link</a></td>
-        <td>${new Date(p.date).toLocaleDateString()}</td>
+        <td>${new Date(p.date).toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" })}</td>
         <td>${renderStars(p.difficulty)}</td>
       `;
       tableBody.appendChild(tr);
@@ -198,4 +198,5 @@
 
 </body>
 </html>
+
 
